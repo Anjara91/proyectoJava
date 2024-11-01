@@ -2,7 +2,7 @@ const productos = [
     {
         id: 1,
         nombre: "Alocasia negra",
-        imagen : "https://www.planfor.es/Donnees_Site/Produit/Photo//alocasia%20x%20amazonica%20-%20c12.jpg",
+        imagen: "https://www.planfor.es/Donnees_Site/Produit/Photo//alocasia%20x%20amazonica%20-%20c12.jpg",
         descripcion: "Esta alocasia posee un follaje remarcable, verde oscuro con unos reflejos metálicos.",
         precio: 16.50,
         stock: 10,

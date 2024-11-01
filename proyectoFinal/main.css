@@ -1,3 +1,4 @@
+
 .productos-container {
     display: flex;
     flex-wrap: wrap;
@@ -6,26 +7,37 @@
 }
 
 .producto {
-    border: 1px solid black;
+    border: 3px solid yellowgreen;
+    border-radius: 10px;
+    overflow: hidden;
     padding: 16px;
     margin: 10px;
     width: 20%;
     text-align: center;
     display: flex;
     flex-direction: column;
+    transition: transform 0, 3s ease;
+    box-shadow: 0, 3s ease;
+    cursor: pointer
 }
 
-button{
-    background-color: green;  
-    color: white;            
-    border: none;                  
-    cursor: pointer;         
-    font-size: 16px;          
-    transition: background-color 0.3s; 
+.producto:hover {
+    border: yellowgreen;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px yellowgreen;
+}
+
+button {
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: greenyellow; 
+    background-color: greenyellow;
 }
 
 .oculto {
@@ -38,26 +50,26 @@ button:hover {
     position: fixed;
     right: 0;
     top: 0;
-    width: 300px;
     max-height: 90vh;
-    background: rgba(255, 255, 255, 0.9);;
+    background: rgba(255, 255, 255, 0.9);
+    ;
     border: 3px solid black;
-    z-index:10;
+    z-index: 10;
     overflow-y: auto;
 }
 
 
 
-#agregCart{
+#agregCart {
     background-color: #86999c;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     border: 2px solid #ccc;
     color: white;
     padding: 7px;
 
 }
 
-#carritoIcon{
+#carritoIcon {
     margin-left: 10px;
     font-size: 18px;
     color: lightgray;
@@ -65,6 +77,7 @@ button:hover {
     position: relative;
     z-index: 20;
 }
+
 .oculto {
     transform: translateX(100%);
 }
@@ -83,27 +96,52 @@ button:hover {
 }
 
 .carrito button:hover {
-background-color: greenyellow;
+    background-color: greenyellow;
 }
 
 #tabla-carrito {
-    width: 100%; /* Ajusta al 100% del ancho disponible */
-    border-collapse: collapse; /* Colapsar bordes para evitar espacios dobles */
+    width: 100%;
+    /* Ajusta al 100% del ancho disponible */
+    border-collapse: collapse;
+    /* Colapsar bordes para evitar espacios dobles */
 }
 
-#tabla-carrito th, #tabla-carrito td {
-    border: 1px solid #ccc; /* Borde gris claro para celdas */
-    padding: 10px; /* Espaciado interno para las celdas */
-    text-align: left; /* Alinear texto a la izquierda */
+#tabla-carrito th,
+#tabla-carrito td {
+    border: 1px solid #ccc;
+    /* Borde gris claro para celdas */
+    padding: 10px;
+    /* Espaciado interno para las celdas */
+    text-align: left;
+    /* Alinear texto a la izquierda */
 }
 
 #tabla-carrito th {
-    background-color: #f4f4f4; /* Fondo gris claro para el encabezado */
-    font-weight: bold; /* Negrita para el encabezado */
+    background-color: #f4f4f4;
+    /* Fondo gris claro para el encabezado */
+    font-weight: bold;
+    /* Negrita para el encabezado */
 }
 
 #tabla-carrito tr:nth-child(even) {
-    background-color: #f9f9f9; /* Color de fondo alternativo para filas pares */
+    background-color: #f9f9f9;
+    /* Color de fondo alternativo para filas pares */
 }
 
-
+.contador {
+    position: absolute;
+    /* Posición absoluta para colocar sobre el icono */
+    top: 0;
+    right: 14;
+    background-color: yellowgreen;
+    /* Color de fondo */
+    color: white;
+    /* Color del texto */
+    border-radius: 50%;
+    /* Hace que sea circular */
+    padding: 2px 5px;
+    /* Espaciado */
+    font-size: 10px;
+    /* Tamaño del texto */
+    margin: 10px -3px;
+}
